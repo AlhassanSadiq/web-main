@@ -2,6 +2,8 @@
 require 'assets/connection.php';
 require 'assets/inject.php';
 
+
+
 // Start a session to store and manage user data
 session_start();
 
@@ -42,6 +44,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['login_error'] = 'Invalid email or password.';
       }
     }
+    // Your reCAPTCHA secret key
+$recaptchaSecretKey = '6LdlCS4oAAAAAC8sJU7EGgg7tf_irXgDJAvhkMRY'; // Replace with your actual secret key
+
+// Verify reCAPTCHA
+$recaptcha = new \ReCaptcha\ReCaptcha($recaptchaSecretKey);
+$recaptchaResponse = $_POST['g-recaptcha-response'];
+
+$recaptchaResult = $recaptcha->verify($recaptchaResponse);
+
+if (!$recaptchaResult->isSuccess()) {
+    // reCAPTCHA verification failed
+    $_SESSION['login_error'] = 'reCAPTCHA verification failed. Please try again.';
+    // You can add additional error handling or return the user to the form.
+} else {
+    // reCAPTCHA verification succeeded, continue with your login or signup logic.
+    // ...
+}
+
   }
 
   // Handle signup form submission
@@ -94,6 +114,7 @@ mysqli_stmt_bind_param($stmt, 'sss', $email, $hashed_password, $zero);
 mysqli_close($conn);
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,6 +126,7 @@ mysqli_close($conn);
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <!-- Boxicons CSS -->
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
@@ -129,6 +151,9 @@ mysqli_close($conn);
           <div class="form-link">
             <a href="#" class="forgot-pass">Forgot password?</a>
           </div>
+          <div class="field input-field">
+  <div class="g-recaptcha" data-sitekey="6LdlCS4oAAAAAPbmNKl7jvVpodFoUhgpQDJrWWyz"></div>
+</div>
 
           <div class="field button-field">
             <button type="submit" name="login">Login</button>
@@ -142,28 +167,20 @@ mysqli_close($conn);
 
       <div class="line"></div>
 
-      <div class="media-options">
-        <a href="#" class="field facebook">
-          <i class="bx bxl-facebook facebook-icon"></i>
-          <span>Login with Facebook</span>
-        </a>
-      </div>
-
-      <div class="media-options">
-        <a href="#" class="field google">
-          <img src="images/google.png" alt="" class="google-img" />
-          <span>Login with Google</span>
-        </a>
-      </div>
+      
 
       <!-- Download App Options -->
-      <div>
-        <!-- Add download app options here -->
-        <p>Download our app from:</p>
-        <a href="#" class="app-download">App Store</a>
-        <a href="#" class="app-download">Google Play</a>
-      </div>
-      <!-- End of Download App Options -->
+   <!-- Inside the "Download App Options" section -->
+<div>
+  <p>Download our app from:</p>
+  <a href="#" class="app-download">
+    <img src="https://www.gstatic.com/android/market_images/web/favicon_v2.ico" alt="Google Play Store" class="app-icon" />
+  </a>
+  <a href="#" class="app-download">
+    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" class="app-icon" />
+  </a>
+</div>
+
     </div>
 
     <!-- Signup Form -->
@@ -196,27 +213,22 @@ mysqli_close($conn);
 
       <div class="line"></div>
 
-      <div class="media-options">
-        <a href="#" class="field facebook">
-          <i class="bx bxl-facebook facebook-icon"></i>
-          <span>Login with Facebook</span>
-        </a>
-      </div>
-
-      <div class="media-options">
-        <a href="#" class="field google">
-          <img src="images/google.png" alt="" class="google-img" />
-          <span>Login with Google</span>
-        </a>
-      </div>
+     
 
       <!-- Download App Options -->
-      <div>
-        <!-- Add download app options here -->
-        <p>Download our app from:</p>
-        <a href="#" class="app-download">App Store</a>
-        <a href="#" class="app-download">Google Play</a>
-      </div>
+   
+<!-- Inside the "Download App Options" section -->
+<div>
+  <p>Download our app from:</p>
+  <a href="#" class="app-download">
+    <img src="https://www.gstatic.com/android/market_images/web/favicon_v2.ico" alt="Google Play Store" class="app-icon" />
+  </a>
+  <a href="#" class="app-download">
+    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" class="app-icon" />
+  </a>
+</div>
+
+
       <!-- End of Download App Options -->
     </div>
   </section>

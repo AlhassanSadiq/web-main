@@ -263,3 +263,20 @@ a.google span {
   background-color: #4caf50;
   color: #ffffff;
 }
+/* CSS to style the app icons */
+.app-icon {
+  width: 120px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Adjust the spacing between icons */
+  border: 2px solid #007bff; /* Add a border with your desired color */
+  border-radius: 10px; /* Round the corners */
+  padding: 10px; /* Add padding around the icons */
+  transition: transform 0.2s ease-in-out; /* Add a smooth hover effect */
+
+  /* Optional: Add a hover effect to scale the icons slightly */
+  cursor: pointer;
+}
+
+.app-icon:hover {
+  transform: scale(1.05); /* Scale up by 5% on hover */
+}

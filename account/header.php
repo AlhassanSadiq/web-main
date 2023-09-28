@@ -61,3 +61,4 @@ if (!isset($_SESSION['user_id'])) {
       </li>
     </ul>
   </div>
+  <script src="js/script.js"></script>

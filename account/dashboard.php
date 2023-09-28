@@ -80,4 +80,15 @@ if(mysqli_num_rows($result)>0){
 <?php
 // Close the database connection
 mysqli_close($conn);
+
+
+// Check for success message
+if (isset($_GET['success']) && $_GET['success'] == 1) {
+  echo '<div class="success-message">Payment successfully completed!</div>';
+}
+
+// Check for error message
+if (isset($_GET['error']) && $_GET['error'] == 1) {
+  echo '<div class="error-message">Payment failed. Please try again.</div>';
+}
 ?>
