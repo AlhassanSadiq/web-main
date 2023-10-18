@@ -192,3 +192,25 @@ navToggle.addEventListener("click", function () {
     this.setAttribute("aria-expanded", "true");
   }
 });
+
+
+
+$(document).ready(function() {
+  $('.count').each(function () {
+    var $this = $(this);
+    var target = $this.data('target');
+    $({ countNum: $this.text() }).animate({
+      countNum: target
+    },
+    {
+      duration: 5000,
+      easing: 'linear',
+      step: function () {
+        $this.text(Math.floor(this.countNum));
+      },
+      complete: function () {
+        $this.text(this.countNum);
+      }
+    });
+  });
+});

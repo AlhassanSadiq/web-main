@@ -1,8 +1,7 @@
 <?php
 require 'assets/connection.php';
 require 'assets/inject.php';
-
-
+require 'recaptcha/src/autoload.php';
 
 // Start a session to store and manage user data
 session_start();
@@ -21,6 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       // Query the database to check if the user exists
       $sql = "SELECT id, email, password FROM users WHERE email = ?";
       $stmt = mysqli_prepare($conn, $sql);
+      
+      if (!$stmt) {
+          die('mysqli_prepare failed: ' . mysqli_error($conn));
+      }
+      
       mysqli_stmt_bind_param($stmt, 's', $email);
       mysqli_stmt_execute($stmt);
       mysqli_stmt_store_result($stmt);
@@ -44,24 +48,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['login_error'] = 'Invalid email or password.';
       }
     }
+
     // Your reCAPTCHA secret key
-$recaptchaSecretKey = '6LdlCS4oAAAAAC8sJU7EGgg7tf_irXgDJAvhkMRY'; // Replace with your actual secret key
+    $recaptchaSecretKey = '6LdlCS4oAAAAAC8sJU7EGgg7tf_irXgDJAvhkMRY'; // Replace with your actual secret key
 
-// Verify reCAPTCHA
-$recaptcha = new \ReCaptcha\ReCaptcha($recaptchaSecretKey);
-$recaptchaResponse = $_POST['g-recaptcha-response'];
+    // Verify reCAPTCHA
+    $recaptcha = new \ReCaptcha\ReCaptcha($recaptchaSecretKey);
+    $recaptchaResponse = $_POST['g-recaptcha-response'];
 
-$recaptchaResult = $recaptcha->verify($recaptchaResponse);
+    $recaptchaResult = $recaptcha->verify($recaptchaResponse);
 
-if (!$recaptchaResult->isSuccess()) {
-    // reCAPTCHA verification failed
-    $_SESSION['login_error'] = 'reCAPTCHA verification failed. Please try again.';
-    // You can add additional error handling or return the user to the form.
-} else {
-    // reCAPTCHA verification succeeded, continue with your login or signup logic.
-    // ...
-}
-
+    if (!$recaptchaResult->isSuccess()) {
+        // reCAPTCHA verification failed
+        $_SESSION['login_error'] = 'reCAPTCHA verification failed. Please try again.';
+        // You can add additional error handling or return the user to the form.
+    } else {
+        // reCAPTCHA verification succeeded, continue with your login or signup logic.
+        // ...
+    }
   }
 
   // Handle signup form submission
@@ -79,6 +83,11 @@ if (!$recaptchaResult->isSuccess()) {
       // Check if the email is already registered
       $sql = "SELECT id FROM users WHERE email = ?";
       $stmt = mysqli_prepare($conn, $sql);
+      
+      if (!$stmt) {
+          die('mysqli_prepare failed: ' . mysqli_error($conn));
+      }
+      
       mysqli_stmt_bind_param($stmt, 's', $email);
       mysqli_stmt_execute($stmt);
       mysqli_stmt_store_result($stmt);
@@ -93,13 +102,18 @@ if (!$recaptchaResult->isSuccess()) {
         $sql = "INSERT INTO users (email, password, balance) VALUES (?, ?, ?)";
         $stmt = mysqli_prepare($conn, $sql);
         $zero = '0';
-mysqli_stmt_bind_param($stmt, 'sss', $email, $hashed_password, $zero);
+        
+        if (!$stmt) {
+            die('mysqli_prepare failed: ' . mysqli_error($conn));
+        }
+        
+        mysqli_stmt_bind_param($stmt, 'sss', $email, $hashed_password, $zero);
 
         if (mysqli_stmt_execute($stmt)) {
           // User registration successful, redirect to the login page
           $_SESSION['signup_success'] = 'Registration successful. You can now log in.';
           $_SESSION['user_id'] = $user_id;
-        
+
           header('Location: dashboard.php');
           exit();
         } else {
@@ -113,6 +127,7 @@ mysqli_stmt_bind_param($stmt, 'sss', $email, $hashed_password, $zero);
 // Close the database connection
 mysqli_close($conn);
 ?>
+
 
 
 <!DOCTYPE html>
@@ -171,15 +186,7 @@ mysqli_close($conn);
 
       <!-- Download App Options -->
    <!-- Inside the "Download App Options" section -->
-<div>
-  <p>Download our app from:</p>
-  <a href="#" class="app-download">
-    <img src="https://www.gstatic.com/android/market_images/web/favicon_v2.ico" alt="Google Play Store" class="app-icon" />
-  </a>
-  <a href="#" class="app-download">
-    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" class="app-icon" />
-  </a>
-</div>
+
 
     </div>
 
@@ -218,15 +225,7 @@ mysqli_close($conn);
       <!-- Download App Options -->
    
 <!-- Inside the "Download App Options" section -->
-<div>
-  <p>Download our app from:</p>
-  <a href="#" class="app-download">
-    <img src="https://www.gstatic.com/android/market_images/web/favicon_v2.ico" alt="Google Play Store" class="app-icon" />
-  </a>
-  <a href="#" class="app-download">
-    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" class="app-icon" />
-  </a>
-</div>
+
 
 
       <!-- End of Download App Options -->

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
     <meta name="keywords" content="PORCODES" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script>
       addEventListener(
         "load",
@@ -54,6 +56,7 @@ s0.parentNode.insertBefore(s1,s0);
 
 
     <!-- //Fonts -->
+   
   </head>
 
   <body>
@@ -92,7 +95,7 @@ s0.parentNode.insertBefore(s1,s0);
    
       <!-- banner -->
     <!-- New Section with Title and Image -->
-    <section class="banner_w3pvt">
+    <section class="banner_w3pvt " >
       <div class="container">
         <div class="banner-content">
           <div class="banner-left">
@@ -115,166 +118,156 @@ s0.parentNode.insertBefore(s1,s0);
 
 
     <!-- //banner -->
-    <!-- banner bottom -->
-    <section class="banner-bottom py-5" id="process">
-      <div class="container py-md-5">
-        <div class="row bottom-grids text-center">
-          <div class="col-md-4 bottom-grid">
-            <span class="fa clr1 fa-star-half-o"></span>
-            <p class="number">1</p>
-            <h4>Get a virtual phone number</h4>
-            <p class="mt-4">
-              Select the necessary service, country, operator, and click on the
-              "Buy" button or on the "Arrangement" button. Start by selecting
-              the country, then the service, and finally the operator.
-            </p>
-          </div>
-          <div class="col-md-4 mt-md-0 mt-5 bottom-grid">
-            <span class="fa clr2 fa fa-money"></span>
-            <p class="number">2</p>
-            <h4>Accept SMS to a virtual number</h4>
-            <p class="mt-4">
-              Copy the received phone number and paste it into the registration
-              form on the service from which you need to receive SMS.
-            </p>
-          </div>
-          <div class="col-md-4 mt-md-0 mt-5 bottom-grid">
-            <span class="fa clr3 fa-credit-card"></span>
-            <p class="number">3</p>
-            <h4>Pay and Use</h4>
-            <p class="mt-4">
-              Use the verification code from the received SMS to activate your
-              account on the service.
-            </p>
-          </div>
-          <span class="border-line"></span>
-        </div>
+    <section class="banner-bottom py-5 " id="process">
+  <div class="container py-md-5">
+    <div class="row bottom-grids text-center">
+      <div class="col-md-4 bottom-grid">
+        <span class="fa clr1 fa-phone"></span>
+        <p class="number">1</p>
+        <h4>Get a virtual phone number</h4>
+        <p class="mt-4">
+          Select the necessary service, country, operator, and click on the
+          "Buy" button or on the "Arrangement" button. Start by selecting
+          the country, then the service, and finally the operator.
+        </p>
       </div>
-    </section>
-    <!-- //banner bottom -->
+      <div class="col-md-4 mt-md-0 mt-5 bottom-grid">
+        <span class="fa clr2 fa-envelope"></span>
+        <p class="number">2</p>
+        <h4>Accept SMS to a virtual number</h4>
+        <p class="mt-4">
+          Copy the received phone number and paste it into the registration
+          form on the service from which you need to receive SMS.
+        </p>
+      </div>
+      <div class="col-md-4 mt-md-0 mt-5 bottom-grid">
+        <span class="fa clr3 fa-credit-card"></span>
+        <p class="number">3</p>
+        <h4>Pay and Use</h4>
+        <p class="mt-4">
+          Use the verification code from the received SMS to activate your
+          account on the service.
+        </p>
+      </div>
+      <span class="border-line"></span>
+    </div>
+  </div>
+</section>
+
     <!-- /features -->
 
     <!-- //features -->
 
-    <!-- products -->
-    <section class="products py-5" id="stats">
-      <div class="container py-lg-5 py-3">
-        <h3 class="title-w3ls mb-sm-5 mb-4 text-center">Payment Option</h3>
-        <div class="row products_grids text-center mt-5">
-          <div class="col-lg-3 col-6 grid4">
-            <div class="prodct1">
-              <a href="#">
-                <div class="icon-w3ls f1">
-                  <span class="fa fa fa-users"></span>
-                </div>
-                <h4 class="mt-2">Paypal</h4>
-              </a>
+   <!-- products -->
+<section class="products py-5 fade-in" id="stats">
+  <div class="container py-lg-5 py-3">
+    <h3 class="title-w3ls mb-sm-5 mb-4 text-center">Payment Option</h3>
+    <div class="row products_grids text-center mt-5">
+      <div class="col-lg-3 col-6 grid4">
+        <div class="prodct1">
+          <a href="#">
+            <div class="icon-w3ls f1">
+              <span class="fa fa-cube"></span>
             </div>
-          </div>
-          <div class="col-lg-3 col-6 grid5">
-            <div class="prodct1">
-              <a href="#">
-                <div class="icon-w3ls f2">
-                  <span class="fa fa-handshake-o"></span>
-                </div>
-                <h4 class="mt-2">Paystack</h4>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 grid6 mt-md-0 mt-3">
-            <div class="prodct1">
-              <a href="#">
-                <div class="icon-w3ls f3">
-                  <span class="fa fa-podcast"></span>
-                </div>
-                <h4 class="mt-2">Crypto</h4>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6 grid7 mt-md-0 mt-3">
-            <div class="prodct1">
-              <a href="#">
-                <div class="icon-w3ls f4">
-                  <span class="fa fa-credit-card"></span>
-                </div>
-                <h4 class="mt-2">Credit Cards</h4>
-              </a>
-            </div>
-          </div>
+            <h4 class="mt-2">Binance Pay</h4>
+          </a>
         </div>
       </div>
-    </section>
-    <!-- //products -->
+      <div class="col-lg-3 col-6 grid5">
+        <div class="prodct1">
+          <a href="#">
+            <div class="icon-w3ls f2">
+              <span class="fab fa-bitcoin"></span>
+            </div>
+            <h4 class="mt-2">Bitcoin</h4>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6 grid6 mt-md-0 mt-3">
+        <div class="prodct1">
+          <a href="#">
+            <div class="icon-w3ls f3">
+              <span class="fab fa-bitcoin"></span> <!-- Add your preferred crypto icon here -->
+            </div>
+            <h4 class="mt-2">Crypto</h4>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-6 grid7 mt-md-0 mt-3">
+        <div class="prodct1">
+          <a href="#">
+            <div class="icon-w3ls f4">
+              <span class="fa fa-credit-card"></span>
+            </div>
+            <h4 class="mt-2">Credit Cards</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- //products -->
+
 
 
     <!-- /full-grid -->
 
     <!-- /services -->
-    <div class="welcome py-5">
-      <div class="container py-xl-5 py-lg-3" id="services">
+<div class="welcome py-5 fade-in">
+  <div class="container py-xl-5 py-lg-3" id="services">
+    <div class="row">
+      <div class="col-lg-5 welcome-left">
+        <h4>What We Provide</h4>
+        <h3 class="title-w3ls mt-2 mb-3">Services we’re Provided</h3>
+        <p class="mt-4 pr-lg-5">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Suspendisse porta erat sit amet eros sagittis, quis hendrerit
+          libero aliquam. Fusce semper augue ac dolor efficitur, a pretium
+          metus pellentesque.
+        </p>
+      </div>
+      <div class="col-lg-7 welcome-right text-center mt-lg-0 mt-5">
         <div class="row">
-          <div class="col-lg-5 welcome-left">
-            <h4>What We Provide</h4>
-            <h3 class="title-w3ls mt-2 mb-3">Services we’re Provided</h3>
-
-            <p class="mt-4 pr-lg-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse porta erat sit amet eros sagittis, quis hendrerit
-              libero aliquam. Fusce semper augue ac dolor efficitur, a pretium
-              metus pellentesque.
-            </p>
+          <div class="col-sm-4 service-1-w3pvt serve-gd1">
+            <div class="serve-grid mt-4">
+              <span class="fas fa-phone-alt s1"></span>
+              <p class="mt-2">Virtual Number</p>
+            </div>
           </div>
-          <div class="col-lg-7 welcome-right text-center mt-lg-0 mt-5">
-            <div class="row">
-              <div class="col-sm-4 service-1-w3pvt serve-gd1">
-                <div class="serve-grid mt-4">
-                  <span class="fa fa-users s1"></span>
-                  <p class="mt-2">Virtual Number</p>
-                </div>
-              </div>
-              <div class="col-sm-4 service-1-w3pvt serve-gd2">
-                <div class="serve-grid mt-4">
-                 <span class="fas fa-comment-alt"></span>
-
-</span>
-                  <p class="mt-2">SMS Verify</p>
-                </div>
-                <div class="serve-grid mt-4">
-                 <span class="fas fa-comment-alt"></span>
-
-</span>
-                  <p class="mt-2">Social Platforms</p>
-                </div>
-              </div>
-              <div class="col-sm-4 service-1-w3pvt serve-gd3">
-                <div class="serve-grid mt-4">
-                 <span class="fas fa-comment-alt"></span>
-
-</span>
-                  <p class="mt-2">Register</p>
-                </div>
-                <div class="serve-grid mt-4">
-                 <span class="fas fa-comment-alt"></span>
-
-</span>
-                  <p class="text-li mt-2">OTP</p>
-                </div>
-                <div class="serve-grid mt-4">
-                 <span class="fas fa-comment-alt"></span>
-
-
-                  <p class="mt-2">Recieve sms</p>
-                </div>
-              </div>
+          <div class="col-sm-4 service-1-w3pvt serve-gd2">
+            <div class="serve-grid mt-4">
+              <span class="fas fa-mobile-alt s2"></span>
+              <p class="mt-2">SMS Verify</p>
+            </div>
+            <div class="serve-grid mt-4">
+              <span class="fas fa-globe s3"></span>
+              <p class="mt-2">Social Platforms</p>
+            </div>
+          </div>
+          <div class="col-sm-4 service-1-w3pvt serve-gd3">
+            <div class="serve-grid mt-4">
+              <span class="fas fa-user-plus s4"></span>
+              <p class="mt-2">Register</p>
+            </div>
+            <div class="serve-grid mt-4">
+              <span class="fas fa-key s5"></span>
+              <p class="text-li mt-2">OTP</p>
+            </div>
+            <div class="serve-grid mt-4">
+              <span class="fas fa-inbox s6"></span>
+              <p class="mt-2">Receive SMS</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- //services -->
+  </div>
+</div>
+<!-- //services -->
+
 
     <!-- /news-letter -->
-    <section class="news-letter-w3-pvt">
+    <section class="news-letter-w3-pvt reveal">
       <div class="container contact-form mx-auto text-left">
         <h3 class="title-w3ls two text-left mb-5">Newsletter</h3>
         <form method="post" action="#" class="w3pvt-frm">
@@ -302,9 +295,41 @@ s0.parentNode.insertBefore(s1,s0);
       </div>
     </section>
         <!-- //news-letter -->
-      
+        <section class="achievements py-5 reveal" id="achievements">
+  <div class="container py-lg-5 py-3">
+    <h3 class="title-w3ls mb-sm-5 mb-4 text-center">Our Achievements</h3>
+    <div class="row text-center">
+      <div class="col-md-3 col-6">
+        <div class="achievement-item">
+          <h4 class="count" data-target="1000">0</h4>
+          <p>Happy Customers</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="achievement-item">
+          <h4 class="count" data-target="500">0</h4>
+          <p>Verified Accounts</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class "achievement-item">
+          <h4 class="count" data-target="99">0</h4>
+          <p>Success Rate</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="achievement-item">
+          <h4 class=>24/7</h4>
+          <p>Customer Support</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- //Achievement Section -->
+
         <!--FAQ-->
-    <div class="faq-container" id="faq-container">
+    <div class="faq-container reveal" id="faq-container">
     <h2 class="faq-title">Frequently Asked Questions</h2>
 
     <button onclick="toggleAccordion('faq1')" class="accordion-btn">1. How to get started with us?</button>
@@ -366,29 +391,31 @@ s0.parentNode.insertBefore(s1,s0);
             <a href="#"> PorCodes </a>
           </p>
           <div class="w3-pvt-footer text-md-right text-center mt-4 col-md-5">
-            <ul class="list-unstyled w3-pvt-icons">
-              <li>
-                <a href="#">
-                  <span class="fa fa-facebook-f"></span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-twitter"></span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-dribbble"></span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="fa fa-vk"></span>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <ul class="list-unstyled w3-pvt-icons">
+  <li>
+    <a href="https://www.facebook.com/your-facebook-page">
+      <span class="fa fa-facebook-f"></span>
+    </a>
+  </li>
+  <li>
+    <a href="https://twitter.com/your-twitter-profile">
+      <span class="fa fa-twitter"></span>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.instagram.com/your-instagram-profile">
+      <span class="fa fa-instagram"></span>
+    </a>
+  </li>
+  <li>
+    <a href="https://t.me/your-telegram-profile">
+      <span class="fa fa-telegram"></span>
+    </a>
+  </li>
+</ul>
+
+</div>
+
           <div class="move-top text-right col-md-1">
             <a href="#home" class="move-top">
               <span class="fa fa-angle-up mb-3" aria-hidden="true"></span
@@ -400,4 +427,30 @@ s0.parentNode.insertBefore(s1,s0);
        <!-- //footer -->
   </body>
   <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+$(document).ready(function() {
+  $('.count').each(function () {
+    var $this = $(this);
+    var target = $this.data('target');
+    $({ countNum: $this.text() }).animate({
+      countNum: target
+    },
+    {
+      duration: 2000,
+      easing: 'linear',
+      step: function () {
+        $this.text(Math.floor(this.countNum));
+      },
+      complete: function () {
+        $this.text(this.countNum);
+      }
+    });
+  });
+});
+
+
+
+</script>
+
 </html>

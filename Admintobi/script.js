@@ -15,6 +15,7 @@ function showSection(sectionName) {
   function logout() {
     // Implement logout functionality here
     // For demo purposes, we can simply redirect to the login page
-    window.location.href = 'login.html';
+    window.location.href = 'login.php';
   }
-  
+ 
+

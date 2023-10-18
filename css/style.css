@@ -2291,19 +2291,23 @@ body {
     text-align: left;
     outline: none;
     font-size: 18px;
-    transition: 0.4s;
+    transition: background-color 0.4s, color 0.4s;
   }
-
+  
   .faq-panel {
     background-color: #06002E;
     padding: 18px;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s;
   }
-
+  
   .active {
-    display: block;
+    max-height: 1000px; /* Adjust this value to your content height */
   }
+  
 
 
+/* Base styles for the 'reveal' animation */
 
   
